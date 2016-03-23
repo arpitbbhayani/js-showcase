@@ -1,0 +1,14 @@
+{
+    "apps": [{
+        "exec_mode": "cluster_mode",
+        "instances": 2,
+        "script": "",
+        "name": "",
+        "env": {
+            "PORT": 8142,
+            "NODE_ENV": "production",
+            "MONITORING": true,
+        },
+    }]
+}
+

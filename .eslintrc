@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "id-length": 0,
+    "func-names": 0,
+    "no-dupe-keys": 0,
+    "react/no-did-mount-set-state": 0,
+    "no-unused-expressions": 0,
+    "no-else-return": 0,
+    "react/prop-types": 0,
+    "no-fallthrough": 0,
+    "guard-for-in": 0,
+  }
+}

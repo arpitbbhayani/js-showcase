@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+build/
+static/baseUrl.js
+config/config.js
+src/stats.json
+dist/
+.vscode
+npm-debug*
