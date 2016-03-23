@@ -10,7 +10,7 @@ export function renderHomePage() {
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
-        <title>Todo Application</title>
+        <title>JS Showcase</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="/css/semantic.min.css"/>
     </head>

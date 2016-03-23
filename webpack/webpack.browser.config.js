@@ -4,7 +4,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports =  {
   name: "client",
   entry: {
-    todoHome: "./src/components/todo-index/todo-index.jsx",
+    todoHome: "./src/components/jsshowcase-layout/jsshowcase-layout.jsx",
     vendors: [
       'react',
       'react-dom',

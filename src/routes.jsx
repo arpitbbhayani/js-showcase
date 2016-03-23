@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router';
 
-import Todos from './components/todo-all/todo-all.jsx';
+import JSShowcaseHome from './components/jsshowcase-home/jsshowcase-home.jsx';
 
 export default(
-  <Route path="/" component={ Todos } />
+  <Route path="/" component={ JSShowcaseHome } />
 );

@@ -1,4 +1,6 @@
 import config from '../config/config.js';
+const fs = require('fs');
+const path = require('path');
 
 // Create express app
 import express from 'express';
@@ -19,6 +21,12 @@ import { renderHomePage } from './helpers/html.js';
 
 app.get('/', function(req, res) {
   res.send(renderHomePage());
+});
+
+app.get('/data', function(req, res) {
+  const data = fs.readFileSync(path.join(__dirname, '../data.json'), 'utf8');
+  res.setHeader('Content-Type', 'application/json');
+  res.send(data);
 });
 
 const port = process.env.PORT || config.serverPort;

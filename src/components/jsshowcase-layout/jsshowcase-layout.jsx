@@ -5,23 +5,23 @@ import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import routes from '../../routes.jsx';
-import todosStore from '../../store/todoStore';
+import libStore from '../../store/libStore';
 
 
-export default class IndexView extends React.Component {
+export default class Layout extends React.Component {
   constructor() {
     super();
   }
+
   componentWillMount() {
+    console.log(this.conetxt);
   }
 
   render() {
-    // const history = createBrowserHistory();
-    // syncReduxAndRouter(history, this.todoStore);
-    const history = syncHistoryWithStore(browserHistory, todosStore);
+    const history = syncHistoryWithStore(browserHistory, libStore);
     return (
       <div>
-        <Provider store={ todosStore }>
+        <Provider store={ libStore }>
           <Router history={ history } onUpdate={() => window.scrollTo(0, 0)}>
             { routes }
           </Router>
@@ -32,8 +32,8 @@ export default class IndexView extends React.Component {
 }
 
 ReactDOM.render(
-  <IndexView {...todosStore.getState()} />,
+  <Layout />,
   document.getElementById('root')
 );
 
-export default connect()(IndexView);
+export default connect()(Layout);
