@@ -1,0 +1,9 @@
+.shadowless {
+  -webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.noborder {
+  border: 0 !important;
+}

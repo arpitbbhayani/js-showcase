@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import MenuComponent from '../jsshowcase-menu/jsshowcase-menu.jsx';
 import LibsListComponent from '../jsshowcase-libslist/jsshowcase-libslist.jsx';
-import LibDetailViewComponent from '../jsshowcase-lib-details/jsshowcase-lib-details.jsx';
 import superagent from 'superagent';
 import libStore from '../../store/libStore';
 import { addOneLib, showLoading, removeLoading } from '../../actions/libActions.js';
@@ -18,6 +17,10 @@ export default class JSShowcaseHome extends React.Component {
 
   componentWillMount() {
     this.loadLibs();
+  }
+
+  componentDidUpdate() {
+    window.refreshStickyForLibs();
   }
 
   loadLibs() {
@@ -49,8 +52,8 @@ export default class JSShowcaseHome extends React.Component {
             <LibsListComponent libs={this.props.libs.visibleLibs}/>
           </div>
           <div className="ten wide column">
-            <div className="ui sticky">
-              <LibDetailViewComponent />
+            <div className="ui sticky" id="liblist_details">
+              {this.props.children}
             </div>
           </div>
         </div>

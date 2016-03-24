@@ -21,7 +21,7 @@ export default class Layout extends React.Component {
     return (
       <div>
         <Provider store={ libStore }>
-          <Router history={ history } onUpdate={() => window.scrollTo(0, 0)}>
+          <Router history={ history }>
             { routes }
           </Router>
         </Provider>

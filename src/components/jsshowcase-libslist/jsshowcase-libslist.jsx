@@ -11,9 +11,15 @@ export default class LibsListComponent extends React.Component {
   }
 
   renderContents() {
+    const listStyle = {
+      marginTop: '80px',
+    };
+
     return (
-      <div className="ui vertical menu fluid">
-        {this.props.libs.map(lib => <LibSnippetComponent key={lib.key} name={lib.name} details={lib.details}/>)}
+      <div className="ui grid computer tablet only">
+        <div className="ui vertical shadowless noborder menu fluid" style={ listStyle }>
+          { this.props.libs.map(lib => <LibSnippetComponent key={ lib.key } name={ lib.name } details={ lib.details }/>) }
+        </div>
       </div>
     );
   }
@@ -21,7 +27,7 @@ export default class LibsListComponent extends React.Component {
   render() {
     return (
       <div>
-        {this.renderContents()}
+        { this.renderContents() }
       </div>
     );
   }

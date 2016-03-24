@@ -27,3 +27,10 @@ export function filterLibs(searchQuery) {
     searchQuery,
   };
 }
+
+export function setActiveLib(slug) {
+  return {
+    type: 'SET_ACTIVE_LIB',
+    slug,
+  };
+}

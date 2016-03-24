@@ -3,6 +3,7 @@ import libReducer from './libReducer.js';
 export default function todos(state = {
   libs: [],
   visibleLibs: [],
+  activeLibDetails: {},
 }, action) {
   switch (action.type) {
   case 'ADD_ONE_LIB': {
@@ -22,6 +23,17 @@ export default function todos(state = {
     });
     return Object.assign({}, state, {
       visibleLibs: newVisibleLibs,
+    });
+  }
+  case 'SET_ACTIVE_LIB': {
+    const matchedLibs = state.libs.filter(function(lib) {
+      return lib.name === action.slug;
+    });
+    if (matchedLibs.length !== 1) {
+      return state;
+    }
+    return Object.assign({}, state, {
+      activeLibDetails: matchedLibs[0],
     });
   }
   default:
