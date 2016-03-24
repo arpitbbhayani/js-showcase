@@ -47,11 +47,12 @@ export default class JSShowcaseHome extends React.Component {
     return (
       <div>
         <MenuComponent store={libStore} />
+        <div className="ui hidden divider"></div>
         <div className="ui grid">
-          <div className="six wide column" id="liblist_container">
+          <div className="six wide column computer tablet only" id="liblist_container">
             <LibsListComponent libs={this.props.libs.visibleLibs}/>
           </div>
-          <div className="ten wide column">
+          <div className="ten wide column computer tablet only">
             <div className="ui sticky" id="liblist_details">
               {this.props.children}
             </div>

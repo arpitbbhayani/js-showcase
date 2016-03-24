@@ -24,11 +24,8 @@ export default class LibDetailViewComponent extends React.Component {
   }
 
   render() {
-    const libDetailsStyle = {
-      paddingTop: '80px',
-    };
     return (
-      <div className="ui basic segment" style={libDetailsStyle}>
+      <div className="ui basic segment">
         <div className="ui grey header">
           <h1>{this.props.activeLibDetails.name}</h1>
         </div>
