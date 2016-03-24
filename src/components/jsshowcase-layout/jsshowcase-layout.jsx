@@ -14,7 +14,6 @@ export default class Layout extends React.Component {
   }
 
   componentWillMount() {
-    console.log(this.conetxt);
   }
 
   render() {

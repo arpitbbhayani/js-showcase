@@ -46,7 +46,7 @@ export default class JSShowcaseHome extends React.Component {
         <MenuComponent store={libStore} />
         <div className="ui grid">
           <div className="six wide column" id="liblist_container">
-            <LibsListComponent libs={this.props.libs}/>
+            <LibsListComponent libs={this.props.libs.visibleLibs}/>
           </div>
           <div className="ten wide column">
             <div className="ui sticky">
