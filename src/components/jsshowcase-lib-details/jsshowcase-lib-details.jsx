@@ -30,7 +30,7 @@ export default class LibDetailViewComponent extends React.Component {
           <h1>{this.props.activeLibDetails.name}</h1>
         </div>
         <div>
-          { (this.props.activeLibDetails.details && this.props.activeLibDetails.details.keywords && ? this.props.activeLibDetails.details.keywords.map(function(label, index) {
+          { (this.props.activeLibDetails.details && this.props.activeLibDetails.details.keywords) ? this.props.activeLibDetails.details.keywords.map(function(label, index) {
             return (
               <div key={'tag' + index} className="ui green basic label" style={{marginTop: '5px', fontWeight: 'normal'}}>
                 {label}
