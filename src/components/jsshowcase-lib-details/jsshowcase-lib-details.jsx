@@ -37,9 +37,9 @@ export default class LibDetailViewComponent extends React.Component {
         </thead>
         <tbody>
           <tr>
-            <td>{details.source.github.stars} <span className="ui grey header"><h5><i className="star icon"></i>STARS</h5></span></td>
-            <td>{details.source.github.forks} <span className="ui grey header"><h5><i className="fork icon"></i>FORKS</h5></span></td>
-            <td>{details.source.github.open_issues} <span className="ui grey header"><h5><i className="warning circle icon"></i>OPEN ISSUES</h5></span></td>
+            <td><span className="ui grey header"><h5><i className="star icon"></i>{details.source.github.stars} STARS</h5></span></td>
+            <td><span className="ui grey header"><h5><i className="fork icon"></i>{details.source.github.forks} FORKS</h5></span></td>
+            <td><span className="ui grey header"><h5><i className="warning circle icon"></i>{details.source.github.open_issues} OPEN ISSUES</h5></span></td>
           </tr>
         </tbody>
       </table>
@@ -52,7 +52,7 @@ export default class LibDetailViewComponent extends React.Component {
     }
     return (
       <div className="ui grid">
-        <div className="twelve wide column computer only">
+        <div className="fourteen wide column computer only">
           {this.getGithubStatsTable(details)}
         </div>
         <div className="sixteen wide column tablet only">

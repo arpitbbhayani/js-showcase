@@ -28,8 +28,9 @@ export default class MenuComponent extends React.Component {
           <div className="ui three column stackable grid container fitted computer only vertically padded">
             <div className="three wide column item"><p className="largetext" style={{'color': 'white'}}>JS Showcase</p></div>
             <div className="ui search item ten wide column">
-              <div className="ui fluid input">
-                <input type="text" placeholder="JS Search" onChange={this.onTextChange}/>
+              <div className="ui icon input">
+                <input type="text" placeholder="Search" onChange={this.onTextChange}/>
+                <i className="search icon"></i>
               </div>
             </div>
           </div>
@@ -39,8 +40,9 @@ export default class MenuComponent extends React.Component {
             </div>
             <div className="row">
               <div className="ui search item center aligned column">
-                <div className="ui input">
-                  <input type="text" placeholder="JS Search" onChange={this.onTextChange}/>
+                <div className="ui icon input">
+                  <input type="text" placeholder="Search" onChange={this.onTextChange}/>
+                  <i className="search icon"></i>
                 </div>
               </div>
             </div>
