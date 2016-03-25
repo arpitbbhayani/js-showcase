@@ -11,9 +11,11 @@ export default class LibSnippetComponent extends React.Component {
     const libLink = '/' + this.props.name;
     return (
       <div className="ui fluid item libSnippet">
-        <div className="largetext">
-          <Link to={libLink}>{this.props.name}</Link>
-        </div>
+        <Link to={libLink}>
+          <div className="largetext">
+            {this.props.name}
+          </div>
+        </Link>
       </div>
     );
   }
